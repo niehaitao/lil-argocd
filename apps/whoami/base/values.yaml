@@ -1,0 +1,11 @@
+# Base default values (applies to all environments)
+replicaCount: 1
+
+image:
+  repository: traefik/whoami
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
