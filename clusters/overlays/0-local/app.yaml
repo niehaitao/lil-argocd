@@ -7,7 +7,7 @@ metadata:
 spec:
   source:
     directory:
-      include: '**/*/0-local/'
+      include: '**/0-local/*.yaml'
   destination:
     server: https://kubernetes.default.svc
 
