@@ -3,10 +3,5 @@ kind: Kustomization
 metadata:
   name: arbitrary
 
-labels:
-  - includeSelectors: true
-    pairs:
-      org: lil
-
 resources:
-- app.yaml
+  - 0-local
