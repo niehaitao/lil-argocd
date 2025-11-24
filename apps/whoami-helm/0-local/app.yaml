@@ -11,7 +11,7 @@ spec:
     path: helm
     helm:
       valueFiles:
-        - ../0-local/values.yaml
+        - values-local.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: demo
