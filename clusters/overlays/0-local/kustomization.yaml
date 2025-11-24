@@ -1,7 +1,6 @@
 resources:
   - ../../base
 
-# Define the destination cluster name, which is different for each cluster
 patches:
   - path: app.yaml
     target:

@@ -7,7 +7,7 @@ metadata:
 spec:
   source:
     directory:
-      include: '*/overlays/0-local/'
+      include: '**/*/0-local/'
   destination:
     server: https://kubernetes.default.svc
 
