@@ -11,7 +11,8 @@ spec:
     path: helm
     helm:
       values: |
-        ingress.path: /who-am-i
+        ingress:
+          path: /who-am-i
   destination:
     server: https://kubernetes.default.svc
     namespace: demo
