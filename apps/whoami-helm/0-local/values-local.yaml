@@ -1,3 +1,0 @@
-ingress:
-  host: localhost
-  path: /who-am-i

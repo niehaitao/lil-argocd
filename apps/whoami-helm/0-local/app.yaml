@@ -10,8 +10,9 @@ spec:
     targetRevision: HEAD
     path: helm
     helm:
-      valueFiles:
-        - values-local.yaml
+      values: |
+        ingress:
+          path: /who-am-i
   destination:
     server: https://kubernetes.default.svc
     namespace: demo
