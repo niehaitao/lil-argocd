@@ -1,18 +1,10 @@
 resources:
   - ../../base
 
-namePrefix: cluster-local-
-
-labels:
-  - includeSelectors: true
-    pairs:
-      env: local
-
 # Define the destination cluster name, which is different for each cluster
 patches:
-- patch: |-
-    - op: replace
-      path: /spec/destination/server
-      value: https://kubernetes.default.svc
-  target:
-    kind: Application
+  - path: app.yaml
+    target:
+      kind: Application
+
+namePrefix: cluster-local-

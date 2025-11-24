@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: root-app
+  labels:
+    env: local
+spec:
+  source:
+    directory:
+      include: '*/overlays/0-local/'
+  destination:
+    server: https://kubernetes.default.svc
+

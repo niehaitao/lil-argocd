@@ -1,10 +1,11 @@
 ---
-# 2) Root application that manages everything under clusters/0-local
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: root-app
   namespace: argocd
+  labels:
+    org: lil
 spec:
   project: default
   source:
