@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cluster-local-whoami
+  name: whoami-cluster-0-local
   namespace: argocd
 spec:
   project: default
