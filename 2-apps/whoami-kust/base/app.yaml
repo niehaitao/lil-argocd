@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: whoami
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/niehaitao/lil-whoami.git
+    targetRevision: HEAD
+    path: helm/whoami
+    helm:
+      valueFiles:
+        - values.yaml
+  destination:
+    server: DEST_CLUSTER_NAME
+    namespace: DEST_NAMESPACE
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

@@ -2,23 +2,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root-app
+  name: argocd-root-app
   namespace: argocd
-  labels:
-    org: lil
 spec:
   project: default
   source:
     repoURL: https://github.com/niehaitao/lil-argocd.git
     targetRevision: HEAD
-    path: apps
-    directory:
-      recurse: true
+    path: 1-clusters/overlays
+    kustomize: {}
 
   destination:
     namespace: argocd
-    # This name MUST match the 'name' field in the Argo CD cluster Secret/Context.
-    server: DEST_CLUSTER_NAME
+    server: https://kubernetes.default.svc
 
   syncPolicy:
     automated:
