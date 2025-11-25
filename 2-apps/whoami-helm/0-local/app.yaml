@@ -12,6 +12,7 @@ spec:
     helm:
       values: |
         ingress:
+          host: localhost
           path: /who-am-i
   destination:
     server: https://kubernetes.default.svc

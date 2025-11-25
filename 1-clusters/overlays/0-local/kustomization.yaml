@@ -6,4 +6,4 @@ patches:
     target:
       kind: Application
 
-namePrefix: cluster-local-
+nameSuffix: -cluster-0-local

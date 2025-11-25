@@ -6,11 +6,11 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
-    repoURL: https://github.com/niehaitao/lil-argocd.git
-    targetRevision: HEAD
-    path: 1-clusters/overlays
-    kustomize: {}
+  sources:
+    - repoURL: https://github.com/niehaitao/lil-argocd.git
+      targetRevision: HEAD
+      path: 1-clusters/overlays/0-local
+      kustomize: {}
 
   destination:
     namespace: argocd
